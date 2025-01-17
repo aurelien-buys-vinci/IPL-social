@@ -56,6 +56,18 @@ describe("list of test for passwordChecker", function() {
     it("should return true if password is valid", function() {
         expect(checkPassword("azertyu8@")).toBe(true);
     });
-    
+
+    it("should return false if password is less than 8 characters", function() {
+        expect(checkPassword("azertyu")).toBe(false);
+    });
+    it("should return false if password has no special character", function() {
+        expect(checkPassword("azertyu8")).toBe(false);
+    });
+    it("should return false if password has no number", function() {
+        expect(checkPassword("azertyu@")).toBe(false);
+    });
+    it("should return false if password is IPL", function() {
+        expect(checkPassword("azertyuIPL")).toBe(false);
+    });
 });
             
