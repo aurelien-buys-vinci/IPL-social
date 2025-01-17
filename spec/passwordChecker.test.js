@@ -46,5 +46,9 @@ describe("list of test for password do not containt IPL passwordChecker", functi
     it("should return true if password is not IPL", function() {
         expect(containsIPL("azertyu8")).toBe(true);
     });
+
+    it("should return false if password is IPL", function() {
+        expect(containsIPL("azertyuIPL")).toBe(false);
+    });
 });
             
