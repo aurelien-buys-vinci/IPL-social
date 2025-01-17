@@ -8,4 +8,8 @@ describe("list of test for minimum length of passwordChecker", function() {
     it("should return false if password is less than 8 characters", function() {
         expect(checkPassword("1234567")).toBe(false);
     });
+
+    it("should return true if password is more than 8 characters", function() {
+        expect(checkPassword("123456789")).toBe(true);
+    });
 });
