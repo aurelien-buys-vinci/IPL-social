@@ -17,7 +17,7 @@ function containsSpecialCharacter(password) {
 }
 
 function containsNumber(password) {
-    return true;
+    return /[0-9]/.test(password);
 }
 
 module.exports = { checkPassword, isValidLength, containsSpecialCharacter, containsNumber };
