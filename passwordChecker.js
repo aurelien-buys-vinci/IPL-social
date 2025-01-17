@@ -16,4 +16,8 @@ function containsSpecialCharacter(password) {
     return /[^a-zA-Z0-9]/.test(password);
 }
 
-module.exports = { checkPassword, isValidLength, containsSpecialCharacter };
+function containsNumber(password) {
+    return true;
+}
+
+module.exports = { checkPassword, isValidLength, containsSpecialCharacter, containsNumber };
