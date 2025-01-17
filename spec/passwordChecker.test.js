@@ -1,4 +1,4 @@
-const { checkPassword, isValidLength, containsSpecialCharacter, containsNumber } = require('../passwordChecker.js');
+const { checkPassword, isValidLength, containsSpecialCharacter, containsNumber, containsIPL } = require('../passwordChecker.js');
 
 describe("list of test for minimum length of passwordChecker", function() {
     it("should return true if password is greater than 8 characters", function() {
@@ -39,6 +39,12 @@ describe("list of test for minimum one number passwordChecker", function() {
 
     it("should return true if password has more than one number", function() {
         expect(containsNumber("azertyu89")).toBe(true);
+    });
+});
+
+describe("list of test for password do not containt IPL passwordChecker", function() {
+    it("should return true if password is not IPL", function() {
+        expect(containsIPL("azertyu8")).toBe(true);
     });
 });
             
