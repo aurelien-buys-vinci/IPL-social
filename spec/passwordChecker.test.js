@@ -22,5 +22,9 @@ describe("list of test for minimum one special character passwordChecker", funct
     it("should return false if password has no special character", function() {
         expect(checkPassword("12345678")).toBe(false);
     });
+
+    it("should return true if password has more than one special character", function() {
+        expect(checkPassword("12345678@#")).toBe(true);
+    });
 });
             
