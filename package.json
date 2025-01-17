@@ -1,0 +1,13 @@
+{
+  "name": "ipl-social",
+  "version": "1.0.0",
+  "description": "Projet IPL Social",
+  "main": "passwordChecker.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.10.0"
+  }
+}
