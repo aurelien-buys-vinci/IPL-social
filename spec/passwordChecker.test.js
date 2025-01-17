@@ -36,5 +36,9 @@ describe("list of test for minimum one number passwordChecker", function() {
     it("should return false if password has no number", function() {
         expect(containsNumber("azertyu")).toBe(false);
     });
+
+    it("should return true if password has more than one number", function() {
+        expect(containsNumber("azertyu89")).toBe(true);
+    });
 });
             
