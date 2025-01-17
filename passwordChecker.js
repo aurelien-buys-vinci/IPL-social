@@ -5,6 +5,12 @@ function checkPassword(password) {
     if (!containsSpecialCharacter(password)) {
         return false;
     }
+    if (!containsNumber(password)) {
+        return false;
+    }
+    if (!containsIPL(password)) {
+        return false;
+    }
     return true;
 }
 

@@ -51,4 +51,11 @@ describe("list of test for password do not containt IPL passwordChecker", functi
         expect(containsIPL("azertyuIPL")).toBe(false);
     });
 });
+
+describe("list of test for passwordChecker", function() {
+    it("should return true if password is valid", function() {
+        expect(checkPassword("azertyu8@")).toBe(true);
+    });
+    
+});
             
