@@ -1,8 +1,15 @@
 function checkPassword(password) {
-    if (password.length < 8) {
+    if (!isValidLength(password)) {
+        return false;
+    }
+    if (!password.match(/[^a-zA-Z0-9]/)) {
         return false;
     }
     return true;
 }
 
-module.exports = { checkPassword };
+function isValidLength(password) {
+    return password.length >= 8;
+}
+
+module.exports = { checkPassword, isValidLength };
